@@ -1,0 +1,8 @@
+SeleniumGlueCode\Register\TestRegister.class
+PageFactory\CreateAccountPage.class
+SeleniumGlueCode\Login\TestLogin.class
+PageFactory\HomePage.class
+PageFactory\MyAccountPage.class
+PageFactory\LoginPage.class
+Utilities\GetScreenShot.class
+Runner\Testrunner.class
