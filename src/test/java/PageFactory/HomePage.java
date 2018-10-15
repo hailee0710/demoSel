@@ -16,7 +16,7 @@ public class HomePage {
 	}
 	
 	//get Sign in
-	@FindBy(linkText="Sign in")
+	@FindBy(xpath="//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")
 	private WebElement signInBtn;
 	
 	public void clickSignIn() {

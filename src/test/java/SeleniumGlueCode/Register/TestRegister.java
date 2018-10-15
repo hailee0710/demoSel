@@ -2,6 +2,7 @@ package SeleniumGlueCode.Register;
 
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.vimalselvam.cucumber.listener.Reporter;
@@ -10,7 +11,9 @@ import PageFactory.CreateAccountPage;
 import PageFactory.HomePage;
 import PageFactory.LoginPage;
 import PageFactory.MyAccountPage;
+import Utilities.ConfigFileReader;
 import Utilities.GetScreenShot;
+import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -19,18 +22,21 @@ import org.junit.Assert;
 public class TestRegister {
 
 	WebDriver driver;
+	ConfigFileReader configFileReader;
 	HomePage objHomePage;
 	LoginPage objLoginPage;
 	MyAccountPage objMyAccountPage;
 	CreateAccountPage objCreateAccountPage;
 	
 	 @Given("^user is on Homepage$")
-	 public void user_is_on_Homepage() throws Throwable {     
-	  	System.setProperty("webdriver.gecko.driver","D:\\Projects\\WiPro\\eclipse-workspace\\geckodriver.exe");
-	    driver = new FirefoxDriver();
-	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	    driver.get("http://automationpractice.com/index.php");
-	 }
+	 public void user_is_on_homepage() throws Throwable {  
+	    	configFileReader = new ConfigFileReader();
+	    	
+	    	System.setProperty(configFileReader.getDriverType(),System.getProperty("user.dir") + configFileReader.getDriverPath());
+	        driver = new FirefoxDriver();
+	        driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
+	        driver.get(configFileReader.getUrl());
+	    }
 	 
 	 @When("^user goes to Login Page$")
 	    public void user_goes_to_Login_Page() throws Throwable {
@@ -43,7 +49,7 @@ public class TestRegister {
 	   @When("^user enters email and click on Sign Up button$")
 	    public void user_enters_username_and_Password() throws Throwable {
 	    	objLoginPage = new LoginPage(driver);
-	    	objLoginPage.enterEmailSignUp("hai13@qa.team");
+	    	objLoginPage.enterEmailSignUp("hai16@qa.team");
 	        objLoginPage.clickSignUp();   
 	        Reporter.addScreenCaptureFromPath(GetScreenShot.capture(driver, "screenShotName5"));
 
@@ -87,8 +93,11 @@ public class TestRegister {
 	    	objMyAccountPage = new MyAccountPage(driver);
 	    	Assert.assertEquals("Hai Lee", objMyAccountPage.getUserName());
 	        Reporter.addScreenCaptureFromPath(GetScreenShot.capture(driver, "screenShotName8"));
-
-	    	driver.quit(); 
+	    }
+	    
+	    @After
+	    public void afterScenario() {
+	    	driver.quit();
 	    }
 	 
 }

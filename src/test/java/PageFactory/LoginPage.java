@@ -29,6 +29,14 @@ public class LoginPage {
 	@FindBy(id="SubmitCreate")
 	private WebElement submitSignUp;
 	
+	@FindBy(xpath="/html/body/div/div[2]/div/div[3]/div/div[1]/ol/li")
+	private WebElement errorMessage;
+	
+	//get error text
+	public String getErrorMessage() {
+		return errorMessage.getText();
+	}
+	
 	//fill in email
 	public void enterEmail(String strEmail) {
 		
