@@ -17,8 +17,7 @@ public class HomePage extends BasePage {
 	}
 	
 	public void loadHomePage() {
-		configFileReader = new ConfigFileReader();
-    	driver.get(configFileReader.getUrl());
+		
 	}
 
 	//get Sign in
