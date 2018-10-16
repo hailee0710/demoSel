@@ -38,8 +38,7 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-						<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
-			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1)" view='testrunner-logs-view'><i class='material-icons'>note</i></a></li>
 		</ul>
 
@@ -53,7 +52,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Oct 15, 2018 05:25:07 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Oct 16, 2018 04:05:08 PM</span>
 				</a>
 			</li>
 			<li>
@@ -79,8 +78,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
-						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -131,10 +128,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -146,10 +143,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>2</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -161,10 +158,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>4</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>14</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='25%'>2</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='25%'>2</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -178,15 +175,15 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Login Feature</span>
-						<span class='test-time'>Oct 15, 2018 05:25:08 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-time'>Oct 16, 2018 04:05:08 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenario node' test-id='2' status='fail'>
-	<span class='duration right label'>0h 0m 25s+236ms</span>
+<div class='scenario node' test-id='2' status='pass'>
+	<span class='duration right label'>0h 0m 22s+626ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Login as a authenticated user</span>
@@ -206,37 +203,37 @@
 			
 			<span class="bdd-step-name">When user navigates to Login Page</span>
 			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\screenshot\screenShotName1.png"><i class='material-icons'>panorama</i></a></li>
+				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.05.26.964.png"><i class='material-icons'>panorama</i></a></li>
 			</ul>
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='5' class='node and fail' status='fail'>
+		<li test-id='5' class='node and pass' status='pass'>
 			
 			<b>And</b>
 			
 			<span class="bdd-step-name">And user enters username and Password</span>
-				<div class='pre'><pre>java.lang.IndexOutOfBoundsException: Index: 1, Size: 0
-	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
-	at java.util.ArrayList.get(ArrayList.java:433)
-	at Utilities.DataProvider.getData(DataProvider.java:27)
-	at SeleniumGlueCode.Login.TestLogin.user_enters_username_and_Password(TestLogin.java:56)
-	at ?.And user enters username and Password(src/test/java/Features/Login/TestLogin.feature:7)
-</pre></div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.05.29.505.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='6' class='node then skip' status='skip'>
+		<li test-id='6' class='node then pass' status='pass'>
 			
 			<b>Then</b>
 			
 			<span class="bdd-step-name">Then success message is displayed</span>
-				<div class='pre'>skipped</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.05.31.258.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>passed</div>
 			
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='7' status='fail'>
-	<span class='duration right label'>0h 0m 31s+691ms</span>
+<div class='scenario node' test-id='7' status='pass'>
+	<span class='duration right label'>0h 0m 22s+332ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Login fail as user is not exist</span>
@@ -256,31 +253,114 @@
 			
 			<span class="bdd-step-name">When user navigates to Login Page</span>
 			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\screenshot\screenShotName1.png"><i class='material-icons'>panorama</i></a></li>
+				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.05.49.319.png"><i class='material-icons'>panorama</i></a></li>
 			</ul>
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='10' class='node and fail' status='fail'>
+		<li test-id='10' class='node and pass' status='pass'>
 			
 			<b>And</b>
 			
 			<span class="bdd-step-name">And user enters non existing username and Password</span>
-				<div class='pre'><pre>java.lang.IndexOutOfBoundsException: Index: 3, Size: 0
-	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
-	at java.util.ArrayList.get(ArrayList.java:433)
-	at Utilities.DataProvider.getData(DataProvider.java:27)
-	at SeleniumGlueCode.Login.TestLogin.user_enters_non_existing_username_and_Password(TestLogin.java:69)
-	at ?.And user enters non existing username and Password(src/test/java/Features/Login/TestLogin.feature:13)
-</pre></div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.05.53.089.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='11' class='node then skip' status='skip'>
+		<li test-id='11' class='node then pass' status='pass'>
 			
 			<b>Then</b>
 			
 			<span class="bdd-step-name">Then error message is displayed</span>
-				<div class='pre'>skipped</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.05.54.469.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>Register Feature</span>
+						<span class='test-time'>Oct 16, 2018 04:05:55 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='13' status='pass'>
+	<span class='duration right label'>0h 0m 28s+243ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Register new user</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='14' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given user is on Homepage</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='15' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When user goes to Login Page</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.06.17.051.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='16' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And user enters email and click on Sign Up button</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.06.19.413.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='17' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And user enters all required information</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.06.19.764.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='18' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then success message is shown</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.06.23.953.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='19' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Name is displayed on header</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.06.24.036.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>passed</div>
 			
 		</li>
 	</ul>
@@ -313,84 +393,6 @@
 </div>
 <!-- test view -->
 <!-- category view -->
-<div id='exception-view' class='view hide'>
-
-    <section id='controls'>
-        <div class='controls grey lighten-4'>
-            <!-- search -->
-            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
-                <a href="#" class='search-div'>
-                    <i class='material-icons'>search</i> Search
-                </a>
-
-                <div class='input-field left hide'>
-                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-                </div>
-
-            </div>
-            <!-- search -->
-        </div>
-    </section>
-
-    <div class='subview-left left'>
-
-        <div class='view-summary'>
-            <h5>Exceptions</h3>
-                <ul id='exception-collection' class='exception-collection'>
-
-                        <li class='exception displayed active'>
-                            <div class='exception-heading'>
-                                <span class='exception-name'>java.lang.IndexOutOfBoundsException</span>
-                                <span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
-                            </div>
-                            <div class='exception-content hide'>
-                                <div class='exception-tests'>
-                                    <table class='bordered table-results'>
-                                        <thead>
-                                        <tr>
-                                            <th>Timestamp</th>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                                    <tr>
-                                                        <td>Oct 15, 2018 05:25:33 PM</td>
-                                                        <td class='linked' test-id='5'>Login Feature.Login as a authenticated user.And user enters username and Password</td>
-                                                        <td><pre><pre>java.lang.IndexOutOfBoundsException: Index: 1, Size: 0
-	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
-	at java.util.ArrayList.get(ArrayList.java:433)
-	at Utilities.DataProvider.getData(DataProvider.java:27)
-	at SeleniumGlueCode.Login.TestLogin.user_enters_username_and_Password(TestLogin.java:56)
-	at ?.And user enters username and Password(src/test/java/Features/Login/TestLogin.feature:7)
-</pre></pre></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Oct 15, 2018 05:26:05 PM</td>
-                                                        <td class='linked' test-id='10'>Login Feature.Login fail as user is not exist.And user enters non existing username and Password</td>
-                                                        <td><pre><pre>java.lang.IndexOutOfBoundsException: Index: 3, Size: 0
-	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
-	at java.util.ArrayList.get(ArrayList.java:433)
-	at Utilities.DataProvider.getData(DataProvider.java:27)
-	at SeleniumGlueCode.Login.TestLogin.user_enters_non_existing_username_and_Password(TestLogin.java:69)
-	at ?.And user enters non existing username and Password(src/test/java/Features/Login/TestLogin.feature:13)
-</pre></pre></td>
-                                                    </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-                </ul>
-        </div>
-    </div>
-
-    <div class='subview-right left'>
-        <div class='view-summary'>
-            <h5 class='exception-name'></h5>
-        </div>
-    </div>
-</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -400,37 +402,37 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>1</div>
-				</div>
-			</div>
-			<div class='col s2'>
-				<div class='card-panel r'>
-					Scenarios
 					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>3</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>8</div>
+					<div class='panel-lead'>14</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Oct 15, 2018 05:25:07 PM</div>
+					<div class='panel-lead'>Oct 16, 2018 04:05:08 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Oct 15, 2018 05:26:06 PM</div>
+			 		<div class='panel-lead'>Oct 16, 2018 04:06:25 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 58s+337ms</div>
+					<div class='panel-lead'>0h 1m 16s+867ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -452,7 +454,7 @@
 							</tr>
 							<tr>
 								<td>Machine</td>
-								<td>Windows 1064 Bit</td>
+								<td>Windows 10 amd64 Build: 10.0</td>
 							</tr>
 							<tr>
 								<td>Selenium</td>
@@ -488,31 +490,31 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 0,
-				failParent: 1,
+				passParent: 2,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
+				exceptionsParent: 0,
 				
-				passChild: 0,
-				failChild: 2,
+				passChild: 3,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 2,
+				exceptionsChild: 0,
 				
-				passGrandChild: 4,
-				failGrandChild: 2,
+				passGrandChild: 14,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 2,
+				skipGrandChild: 0,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 4,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		

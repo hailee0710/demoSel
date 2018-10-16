@@ -6,5 +6,7 @@ D:\Projects\WiPro\eclipse-workspace\demo\src\test\java\SeleniumGlueCode\Login\Te
 D:\Projects\WiPro\eclipse-workspace\demo\src\test\java\Utilities\ConfigFileReader.java
 D:\Projects\WiPro\eclipse-workspace\demo\src\test\java\PageFactory\CreateAccountPage.java
 D:\Projects\WiPro\eclipse-workspace\demo\src\test\java\PageFactory\HomePage.java
+D:\Projects\WiPro\eclipse-workspace\demo\src\test\java\SeleniumGlueCode\BaseStepDefinition\BaseStep.java
 D:\Projects\WiPro\eclipse-workspace\demo\src\test\java\Utilities\GetScreenShot.java
+D:\Projects\WiPro\eclipse-workspace\demo\src\test\java\PageFactory\BasePage.java
 D:\Projects\WiPro\eclipse-workspace\demo\src\test\java\PageFactory\MyAccountPage.java

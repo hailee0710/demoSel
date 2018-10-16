@@ -4,17 +4,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class CreateAccountPage {
-
-	WebDriver driver;
+public class CreateAccountPage extends BasePage {
 	
 	public CreateAccountPage(WebDriver driver) {
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
+		super(driver);
+		// TODO Auto-generated constructor stub
 	}
-	
+
 	@FindBy(id="id_gender1")
 	private WebElement title;
 	

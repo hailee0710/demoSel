@@ -3,16 +3,14 @@ package PageFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class MyAccountPage {
-	WebDriver driver;
+public class MyAccountPage extends BasePage {
 	
-	public MyAccountPage(WebDriver driver){
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
+	public MyAccountPage(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
 	}
-	
+
 	@FindBy(css=".info-account")
 	private WebElement welcomeText;
 	
