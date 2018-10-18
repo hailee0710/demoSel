@@ -52,7 +52,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Oct 16, 2018 04:05:08 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Oct 16, 2018 04:52:18 PM</span>
 				</a>
 			</li>
 			<li>
@@ -78,6 +78,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -128,10 +129,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> others
 				</div>
 			</div>
 		</div>
@@ -143,10 +144,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='100%'>2</span> others
 				</div>
 			</div>
 		</div>
@@ -158,10 +159,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>14</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='25%'><span class='strong'>2</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='75%'>6</span> others
 				</div>
 			</div>
 		</div>
@@ -175,65 +176,56 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf skip' status='skip' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Login Feature</span>
-						<span class='test-time'>Oct 16, 2018 04:05:08 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Oct 16, 2018 04:52:19 PM</span>
+						<span class='test-status right skip'>skip</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenario node' test-id='2' status='pass'>
-	<span class='duration right label'>0h 0m 22s+626ms</span>
+<div class='scenario node' test-id='2' status='skip'>
+	<span class='duration right label'>0h 0m 3s+367ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Login as a authenticated user</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node given pass' status='pass'>
+		<li test-id='3' class='node given skip' status='skip'>
 			
 			<b>Given</b>
 			
 			<span class="bdd-step-name">Given user is on homepage</span>
-				<div class='pre'>passed</div>
+				<div class='pre'>skipped</div>
 			
 		</li>
-		<li test-id='4' class='node when pass' status='pass'>
+		<li test-id='4' class='node when skip' status='skip'>
 			
 			<b>When</b>
 			
 			<span class="bdd-step-name">When user navigates to Login Page</span>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.05.26.964.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-				<div class='pre'>passed</div>
+				<div class='pre'>skipped</div>
 			
 		</li>
-		<li test-id='5' class='node and pass' status='pass'>
+		<li test-id='5' class='node and skip' status='skip'>
 			
 			<b>And</b>
 			
 			<span class="bdd-step-name">And user enters username and Password</span>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.05.29.505.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-				<div class='pre'>passed</div>
+				<div class='pre'>undefined</div>
 			
 		</li>
-		<li test-id='6' class='node then pass' status='pass'>
+		<li test-id='6' class='node then skip' status='skip'>
 			
 			<b>Then</b>
 			
 			<span class="bdd-step-name">Then success message is displayed</span>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.05.31.258.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-				<div class='pre'>passed</div>
+				<div class='pre'>undefined</div>
 			
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='7' status='pass'>
-	<span class='duration right label'>0h 0m 22s+332ms</span>
+<div class='scenario node' test-id='7' status='skip'>
+	<span class='duration right label'>0h 0m 24s+802ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Login fail as user is not exist</span>
@@ -253,114 +245,25 @@
 			
 			<span class="bdd-step-name">When user navigates to Login Page</span>
 			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.05.49.319.png"><i class='material-icons'>panorama</i></a></li>
+				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.52.45.334.png"><i class='material-icons'>panorama</i></a></li>
 			</ul>
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='10' class='node and pass' status='pass'>
+		<li test-id='10' class='node and skip' status='skip'>
 			
 			<b>And</b>
 			
 			<span class="bdd-step-name">And user enters non existing username and Password</span>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.05.53.089.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-				<div class='pre'>passed</div>
+				<div class='pre'>undefined</div>
 			
 		</li>
-		<li test-id='11' class='node then pass' status='pass'>
+		<li test-id='11' class='node then skip' status='skip'>
 			
 			<b>Then</b>
 			
 			<span class="bdd-step-name">Then error message is displayed</span>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.05.54.469.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-				<div class='pre'>passed</div>
-			
-		</li>
-	</ul>
-</div>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='12'>
-					<div class='test-heading'>
-						<span class='test-name'>Register Feature</span>
-						<span class='test-time'>Oct 16, 2018 04:05:55 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='scenario node' test-id='13' status='pass'>
-	<span class='duration right label'>0h 0m 28s+243ms</span>
-	<div class='desc'>
-		<b>Scenario</b>
-		<span class="desc-text">Register new user</span>
-	</div>
-	<ul class='steps'>
-		<li test-id='14' class='node given pass' status='pass'>
-			
-			<b>Given</b>
-			
-			<span class="bdd-step-name">Given user is on Homepage</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='15' class='node when pass' status='pass'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When user goes to Login Page</span>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.06.17.051.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='16' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And user enters email and click on Sign Up button</span>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.06.19.413.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='17' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And user enters all required information</span>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.06.19.764.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='18' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then success message is shown</span>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.06.23.953.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='19' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And Name is displayed on header</span>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="D:\Projects\WiPro\eclipse-workspace\demo\target\cucumber-reports\2018.10.16.16\screenshot\2018.10.16.16.06.24.036.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-				<div class='pre'>passed</div>
+				<div class='pre'>undefined</div>
 			
 		</li>
 	</ul>
@@ -402,37 +305,37 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>1</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>3</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>14</div>
+					<div class='panel-lead'>8</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Oct 16, 2018 04:05:08 PM</div>
+					<div class='panel-lead'>Oct 16, 2018 04:52:18 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Oct 16, 2018 04:06:25 PM</div>
+			 		<div class='panel-lead'>Oct 16, 2018 04:52:48 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 1m 16s+867ms</div>
+					<div class='panel-lead'>0h 0m 29s+552ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -480,7 +383,10 @@
 		<h5>TestRunner Logs</h5>
 		
 		<div class='card-panel'>
-				Sample test runner output message
+				user is on homepage 
+
+				user navigates to Login Page 
+
 		</div>
 	</div>
 </div>
@@ -490,31 +396,31 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 2,
+				passParent: 0,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
-				skipParent: 0,
-				exceptionsParent: 0,
+				skipParent: 1,
+				exceptionsParent: 1,
 				
-				passChild: 3,
+				passChild: 0,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
-				skipChild: 0,
+				skipChild: 2,
 				infoChild: 0,
-				exceptionsChild: 0,
+				exceptionsChild: 2,
 				
-				passGrandChild: 14,
+				passGrandChild: 2,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 6,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 6,
 			};
 		</script>
 		

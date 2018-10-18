@@ -1,113 +1,112 @@
 package SeleniumGlueCode.Login;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 import com.vimalselvam.cucumber.listener.Reporter;
 
-import PageFactory.HomePage;
-import PageFactory.LoginPage;
-import PageFactory.MyAccountPage;
+import SeleniumGlueCode.BaseStepDefinition.BaseStep;
 import Utilities.GetScreenShot;
-import Utilities.ConfigFileReader;
+import Utilities.PageObjectManager;
 import Utilities.DataProvider;
+import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class TestLogin{
+import org.junit.Assert;
+
+public class TestLogin extends BaseStep{
 	
-	WebDriver driver;
-	HomePage objHomePage;
-	LoginPage objLoginPage;
-	MyAccountPage objMyAccountPage;
-	ConfigFileReader configFileReader;
-	DataProvider dataProvider;
-	DateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss.SSS");
 	
+
 	@Before
-	public void setUp() {
-		configFileReader = new ConfigFileReader();
-    	
-    	System.setProperty(configFileReader.getDriverType(),System.getProperty("user.dir") + configFileReader.getDriverPath());
-        driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(configFileReader.getImplicitlyWait(), TimeUnit.SECONDS);
+	public void before(Scenario scenario) {
+	    this.scenario = scenario;
 	}
 	
 	@After
-	public void cleanUp() {
-    	driver.quit();
+	public void tearDown() {
+		if(scenario.isFailed()) {
+		Reporter.setTestRunnerOutput(scenario.getStatus() + " --------------------------</br>");
+		driver.close();
+		}
 	}
 	
+	//Common steps
 	@Given("^user is on homepage$")
     public void user_is_on_homepage() throws Throwable {  
-		configFileReader = new ConfigFileReader();
-    	driver.get(configFileReader.getUrl());
+		setup(scenario.getName());
+       	Reporter.setTestRunnerOutput("user is on homepage </br>");
     }
     
     @When("^user navigates to Login Page$")
     public void user_navigates_to_Login_Page() throws Throwable {
     	Date date = new Date();
-        objHomePage = new HomePage(driver);
-        objHomePage.clickSignIn();
+		pageObjectManager = new PageObjectManager(driver);
+    	homePage = pageObjectManager.getHomePage();
+        homePage.clickSignIn();
         
         Reporter.addScreenCaptureFromPath(GetScreenShot.capture(driver, dateFormat.format(date)));
-    }
-    
-    @When("^user enters username and Password$")
-    public void user_enters_username_and_Password() throws Throwable {
-    	Date date = new Date();
-    	objLoginPage = new LoginPage(driver);
-    	dataProvider = new DataProvider();
-    	System.out.println(dataProvider.getData("\\Data\\Login_user_data.txt", 0));
-    	System.out.println(dataProvider.getData("\\Data\\Login_user_data.txt", 1));
-    	objLoginPage.enterEmail(dataProvider.getData("\\Data\\Login_user_data.txt", 0));
-    	objLoginPage.enterPasswd(dataProvider.getData("\\Data\\Login_user_data.txt", 1));
-        objLoginPage.clickSignIn();  
-        Reporter.addScreenCaptureFromPath(GetScreenShot.capture(driver, dateFormat.format(date)));
+    	Reporter.setTestRunnerOutput("user navigates to Login Page </br>");
 
     }
     
-    @When("^user enters non existing username and Password$")
-    public void user_enters_non_existing_username_and_Password() throws Throwable{
+    //Valid Login
+    @When("^user enters username and Password$")
+    public void user_enters_username_and_Password() throws Throwable {
     	Date date = new Date();
-    	objLoginPage = new LoginPage(driver);
+    	loginPage = pageObjectManager.getLoginPage();
     	dataProvider = new DataProvider();
-    	System.out.println(dataProvider.getData("\\Data\\Login_user_data.txt", 2));
-    	System.out.println(dataProvider.getData("\\Data\\Login_user_data.txt", 3));
-    	objLoginPage.enterEmail(dataProvider.getData("\\Data\\Login_user_data.txt", 2));
-    	objLoginPage.enterPasswd(dataProvider.getData("\\Data\\Login_user_data.txt", 3));
-        objLoginPage.clickSignIn();  
+    	System.out.println(dataProvider.getData("\\Data\\Login_user_data.txt", 0));
+    	System.out.println(dataProvider.getData("\\Data\\Login_user_data.txt", 1));
+    	loginPage.enterEmail(dataProvider.getData("\\Data\\Login_user_data.txt", 0));
+    	loginPage.enterPasswd(dataProvider.getData("\\Data\\Login_user_data.txt", 1));
+        loginPage.clickSignIn();  
         Reporter.addScreenCaptureFromPath(GetScreenShot.capture(driver, dateFormat.format(date)));
+    	Reporter.setTestRunnerOutput("user enters username and Password </br>");
+
+
     }
-    
+       
     @Then("^success message is displayed$")
     public void success_message_is_displayed() throws Throwable {
     	Date date = new Date();
     	String exp_message = "Welcome to your account. Here you can manage all of your personal information and orders.";
-    	objMyAccountPage = new MyAccountPage(driver);
-    	String actual = objMyAccountPage.getWelcomeText();   	
+    	myAccountPage = pageObjectManager.getMyAccountPage();
+    	String actual = myAccountPage.getWelcomeText();   	
         Assert.assertEquals(exp_message, actual);
         Reporter.addScreenCaptureFromPath(GetScreenShot.capture(driver, dateFormat.format(date)));
+    	Reporter.setTestRunnerOutput("success message is displayed </br>");
+    	driver.close();
 
     }  
     
+    //non-existing user
+    @When("^user enters non existing username and Password$")
+    public void user_enters_non_existing_username_and_Password() throws Throwable{
+    	Date date = new Date();
+    	dataProvider = new DataProvider();
+    	loginPage = pageObjectManager.getLoginPage();
+    	loginPage.enterEmail(dataProvider.getData("\\Data\\Login_user_data.txt", 2));
+    	loginPage.enterPasswd(dataProvider.getData("\\Data\\Login_user_data.txt", 3));
+        loginPage.clickSignIn();  
+        Reporter.addScreenCaptureFromPath(GetScreenShot.capture(driver, dateFormat.format(date)));
+    	Reporter.setTestRunnerOutput("user enters non existing username and Password </br>");
+
+    }
+        
     @Then("^error message is displayed$")
     public void error_message_is_displayed() throws Throwable{
     	Date date = new Date();
     	String exp_message = "Authentication failed.";
-    	objLoginPage = new LoginPage(driver);
-    	Assert.assertEquals(exp_message, objLoginPage.getErrorMessage());
+    	Assert.assertEquals(exp_message, loginPage.getErrorMessage());
     	
         Reporter.addScreenCaptureFromPath(GetScreenShot.capture(driver, dateFormat.format(date)));
-        
+    	Reporter.setTestRunnerOutput("error message is displayed </br> --------------------------</br>");
+        driver.close();
     }
+   
     
 }

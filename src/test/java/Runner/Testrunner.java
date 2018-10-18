@@ -43,7 +43,6 @@ public class Testrunner {
 	    Reporter.setSystemInfo("Selenium", "3.14.0");
 	    Reporter.setSystemInfo("Maven", "3.5.4");
 	    Reporter.setSystemInfo("Java Version", System.getProperty("java.version"));
-        Reporter.setTestRunnerOutput("Sample test runner output message");
                 
     }
 }
