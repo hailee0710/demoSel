@@ -36,7 +36,7 @@ public class TestRegister extends BaseStep{
 	
 	@Given("^user is on Homepage$")
     public void user_is_on_Homepage() throws Throwable {  
-		setup("Start testing Register Feature");
+		setUp("Start testing Register Feature");
        	Reporter.setTestRunnerOutput("user is on homepage </br>");
     }
     

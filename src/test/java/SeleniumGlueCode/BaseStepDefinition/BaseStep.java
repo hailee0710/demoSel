@@ -22,12 +22,15 @@ import cucumber.api.Scenario;
 
 public class BaseStep {
 	
-	protected ConfigFileReader configFileReader;
 	protected Scenario scenario;
-	protected WebDriver driver;
+	protected WebDriver driver;	
+	protected DateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss.SSS");
+
+	//Utilities
+	protected ConfigFileReader configFileReader;
+	protected WebDriverManager webDriverManager;
 	protected PageObjectManager pageObjectManager;
 	protected DataProvider dataProvider;
-	protected DateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss.SSS");
 	
 	//Pages list
 	protected HomePage homePage;
@@ -36,9 +39,9 @@ public class BaseStep {
 	protected CreateAccountPage createAccountPage;
 	protected ProductDetailsPage productDetailsPage;
 	
-	public void setup(String scenario) {
+	public void setUp(String scenario) {
 		
-			WebDriverManager webDriverManager = new WebDriverManager();
+			webDriverManager = new WebDriverManager();
 			driver = webDriverManager.getDriver();
 			
 			configFileReader = new ConfigFileReader();

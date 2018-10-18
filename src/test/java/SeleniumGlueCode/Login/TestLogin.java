@@ -37,7 +37,7 @@ public class TestLogin extends BaseStep{
 	//Common steps
 	@Given("^user is on homepage$")
     public void user_is_on_homepage() throws Throwable {  
-		setup(scenario.getName());
+		setUp(scenario.getName());
        	Reporter.setTestRunnerOutput("user is on homepage </br>");
     }
     

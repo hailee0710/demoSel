@@ -34,7 +34,7 @@ public class TestSearch extends BaseStep{
 	
 	@Given("^user is on HomePage$")
     public void user_is_on_HomePage() throws Throwable {  
-		setup("Start testing Search Feature");
+		setUp("Start testing Search Feature");
        	Reporter.setTestRunnerOutput("user is on homepage </br>");
     }
 	
