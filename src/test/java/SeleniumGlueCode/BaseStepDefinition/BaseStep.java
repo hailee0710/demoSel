@@ -11,11 +11,11 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import com.vimalselvam.cucumber.listener.Reporter;
 
-import PageFactory.CreateAccountPage;
-import PageFactory.HomePage;
-import PageFactory.LoginPage;
-import PageFactory.MyAccountPage;
-import PageFactory.ProductDetailsPage;
+import PageObject.CreateAccountPage;
+import PageObject.HomePage;
+import PageObject.LoginPage;
+import PageObject.MyAccountPage;
+import PageObject.ProductDetailsPage;
 import Utilities.ConfigFileReader;
 import Utilities.DataProvider;
 import Utilities.PageObjectManager;
@@ -65,7 +65,7 @@ public class BaseStep {
 	
 	public void endIfFailed() {
 		if(scenario.isFailed()) {
-			Reporter.setTestRunnerOutput(scenario.getStatus().toUpperCase() + "</br> --------------------------</br>");
+			Reporter.setTestRunnerOutput(scenario.getName() + " " + scenario.getStatus().toUpperCase() + "</br> --------------------------</br>");
 			driver.close();
 			}
 	}

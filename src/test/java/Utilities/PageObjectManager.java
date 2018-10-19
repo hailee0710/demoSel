@@ -2,11 +2,11 @@ package Utilities;
 
 import org.openqa.selenium.WebDriver;
 
-import PageFactory.CreateAccountPage;
-import PageFactory.HomePage;
-import PageFactory.LoginPage;
-import PageFactory.MyAccountPage;
-import PageFactory.ProductDetailsPage;
+import PageObject.CreateAccountPage;
+import PageObject.HomePage;
+import PageObject.LoginPage;
+import PageObject.MyAccountPage;
+import PageObject.ProductDetailsPage;
 
 public class PageObjectManager {
 

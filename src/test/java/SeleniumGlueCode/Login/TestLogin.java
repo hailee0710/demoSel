@@ -4,6 +4,7 @@ import java.util.Date;
 
 import com.vimalselvam.cucumber.listener.Reporter;
 
+import DataObject.LoginUser;
 import SeleniumGlueCode.BaseStepDefinition.BaseStep;
 import Utilities.GetScreenShot;
 import Utilities.PageObjectManager;
@@ -19,8 +20,6 @@ import org.junit.Assert;
 
 public class TestLogin extends BaseStep{
 	
-	
-
 	@Before
 	public void before(Scenario scenario) {
 	    this.scenario = scenario;
@@ -54,12 +53,12 @@ public class TestLogin extends BaseStep{
     @When("^user enters username and Password$")
     public void user_enters_username_and_Password() throws Throwable {
     	Date date = new Date();
+    	
     	loginPage = pageObjectManager.getLoginPage();
-    	dataProvider = new DataProvider();
-    	System.out.println(dataProvider.getData("\\Data\\Login_user_data.txt", 0));
-    	System.out.println(dataProvider.getData("\\Data\\Login_user_data.txt", 1));
-    	loginPage.enterEmail(dataProvider.getData("\\Data\\Login_user_data.txt", 0));
-    	loginPage.enterPasswd(dataProvider.getData("\\Data\\Login_user_data.txt", 1));
+    	System.out.println(dataProvider.getData("\\Data\\Login_user_data.txt", 0, 0));
+    	System.out.println(dataProvider.getData("\\Data\\Login_user_data.txt", 0, 1));
+    	loginPage.enterEmail(dataProvider.getData("\\Data\\Login_user_data.txt", 0, 0));
+    	loginPage.enterPasswd(dataProvider.getData("\\Data\\Login_user_data.txt", 0, 1));
         loginPage.clickSignIn();  
         Reporter.addScreenCaptureFromPath(GetScreenShot.capture(driver, dateFormat.format(date)));
     	Reporter.setTestRunnerOutput("user enters username and Password </br>");
@@ -86,8 +85,8 @@ public class TestLogin extends BaseStep{
     	Date date = new Date();
     	dataProvider = new DataProvider();
     	loginPage = pageObjectManager.getLoginPage();
-    	loginPage.enterEmail(dataProvider.getData("\\Data\\Login_user_data.txt", 2));
-    	loginPage.enterPasswd(dataProvider.getData("\\Data\\Login_user_data.txt", 3));
+    	loginPage.enterEmail(dataProvider.getData("\\Data\\Login_user_data.txt", 1, 0));
+    	loginPage.enterPasswd(dataProvider.getData("\\Data\\Login_user_data.txt", 1, 1));
         loginPage.clickSignIn();  
         Reporter.addScreenCaptureFromPath(GetScreenShot.capture(driver, dateFormat.format(date)));
     	Reporter.setTestRunnerOutput("user enters non existing username and Password </br>");

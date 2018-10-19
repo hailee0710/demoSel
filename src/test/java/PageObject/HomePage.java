@@ -1,10 +1,8 @@
-package PageFactory;
+package PageObject;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import Utilities.ConfigFileReader;
 
 //Get all elements of Home Page
 public class HomePage extends BasePage {
@@ -13,14 +11,6 @@ public class HomePage extends BasePage {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
-
-	ConfigFileReader configFileReader;
-	
-	
-//	public void loadHomePage(WebDriver driver) {
-//		configFileReader = new ConfigFileReader();
-//		driver.get(configFileReader.getUrl());
-//	}
 
 	//get Sign in
 	@FindBy(xpath="//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")
