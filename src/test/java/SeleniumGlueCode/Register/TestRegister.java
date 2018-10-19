@@ -6,7 +6,6 @@ import org.junit.Assert;
 
 import com.vimalselvam.cucumber.listener.Reporter;
 
-
 import SeleniumGlueCode.BaseStepDefinition.BaseStep;
 import Utilities.DataProvider;
 import Utilities.GetScreenShot;
@@ -26,12 +25,9 @@ public class TestRegister extends BaseStep{
 	    this.scenario = scenario;
 	}
 	
-	@After
+	@After("@DoAfterRegister")
 	public void tearDown() {
-		if(scenario.isFailed()) {
-			Reporter.setTestRunnerOutput(scenario.getStatus() + " --------------------------</br>");
-			driver.close();
-			}
+		endIfFailed();
 	}
 	
 	@Given("^user is on Homepage$")

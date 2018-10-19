@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="26" failures="0" name="Runner.Testrunner" time="0.791" errors="8" skipped="3">
+<testsuite tests="26" failures="0" name="Runner.Testrunner" time="0.064" errors="12" skipped="14">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_161\jre\bin"/>
@@ -65,285 +65,33 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Scenario: Login as a authenticated user" name="Given user is on homepage" time="0.003"/>
-  <testcase classname="Scenario: Login as a authenticated user" name="When user navigates to Login Page" time="0"/>
-  <testcase classname="Scenario: Login as a authenticated user" name="And user enters username and Password" time="0"/>
-  <testcase classname="Scenario: Login as a authenticated user" name="Then success message is displayed" time="0"/>
-  <testcase classname="Scenario: Login as a authenticated user" name="Scenario: Login as a authenticated user" time="0.001"/>
-  <testcase classname="Scenario: Login fail as user is not exist" name="Given user is on homepage" time="0"/>
-  <testcase classname="Scenario: Login fail as user is not exist" name="When user navigates to Login Page" time="0"/>
-  <testcase classname="Scenario: Login fail as user is not exist" name="And user enters non existing username and Password" time="0"/>
-  <testcase classname="Scenario: Login fail as user is not exist" name="Then error message is displayed" time="0"/>
-  <testcase classname="Scenario: Login fail as user is not exist" name="Scenario: Login fail as user is not exist" time="0.001"/>
-  <testcase classname="Scenario: Register new user" name="Given user is on Homepage" time="0"/>
-  <testcase classname="Scenario: Register new user" name="When user goes to Login Page" time="0"/>
-  <testcase classname="Scenario: Register new user" name="And user enters email and click on Sign Up button" time="0"/>
-  <testcase classname="Scenario: Register new user" name="And user enters all required information" time="0.003">
-    <error message="Unable to locate element: #id_gender1
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;CL-HAILE&apos;, ip: &apos;10.10.16.156&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 62.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.23.0, moz:headless: false, moz:processID: 11964, moz:profile: C:\Users\hai.le\AppData\Loc..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: e2a9d035-0d15-47a8-a2d2-cf46fdc368ab
-*** Element info: {Using=id, value=id_gender1}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #id_gender1
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;CL-HAILE&apos;, ip: &apos;10.10.16.156&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 62.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.23.0, moz:headless: false, moz:processID: 11964, moz:profile: C:\Users\hai.le\AppData\Loc..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: e2a9d035-0d15-47a8-a2d2-cf46fdc368ab
-*** Element info: {Using=id, value=id_gender1}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy19.click(Unknown Source)
-	at PageFactory.CreateAccountPage.selectTitle(CreateAccountPage.java:63)
-	at SeleniumGlueCode.Register.TestRegister.user_enters_all_required_information(TestRegister.java:71)
-	at ✽.And user enters all required information(Register/TestRegister.feature:8)
+  <testcase classname="Scenario: Login as a authenticated user" name="Given user is on homepage" time="0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at SeleniumGlueCode.BaseStepDefinition.BaseStep.setUp(BaseStep.java:58)
+	at SeleniumGlueCode.Login.TestLogin.user_is_on_homepage(TestLogin.java:37)
+	at ✽.Given user is on homepage(Login/TestLogin.feature:6)
 </error>
   </testcase>
-  <testcase classname="Scenario: Register new user" name="Scenario: Register new user" time="0.004">
-    <error message="Unable to locate element: #id_gender1
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;CL-HAILE&apos;, ip: &apos;10.10.16.156&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 62.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.23.0, moz:headless: false, moz:processID: 11964, moz:profile: C:\Users\hai.le\AppData\Loc..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: e2a9d035-0d15-47a8-a2d2-cf46fdc368ab
-*** Element info: {Using=id, value=id_gender1}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: #id_gender1
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;CL-HAILE&apos;, ip: &apos;10.10.16.156&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 62.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.23.0, moz:headless: false, moz:processID: 11964, moz:profile: C:\Users\hai.le\AppData\Loc..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: e2a9d035-0d15-47a8-a2d2-cf46fdc368ab
-*** Element info: {Using=id, value=id_gender1}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy19.click(Unknown Source)
-	at PageFactory.CreateAccountPage.selectTitle(CreateAccountPage.java:63)
-	at SeleniumGlueCode.Register.TestRegister.user_enters_all_required_information(TestRegister.java:71)
-	at ✽.And user enters all required information(Register/TestRegister.feature:8)
+  <testcase classname="Scenario: Login as a authenticated user" name="Scenario: Login as a authenticated user" time="0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at SeleniumGlueCode.BaseStepDefinition.BaseStep.setUp(BaseStep.java:58)
+	at SeleniumGlueCode.Login.TestLogin.user_is_on_homepage(TestLogin.java:37)
+	at ✽.Given user is on homepage(Login/TestLogin.feature:6)
 </error>
   </testcase>
-  <testcase classname="Scenario: Register new user" name="Then success message is shown" time="0.012">
+  <testcase classname="Scenario: Login as a authenticated user" name="When user navigates to Login Page" time="0.016">
     <skipped/>
   </testcase>
-  <testcase classname="Scenario: Register new user" name="And Name is displayed on header" time="0.013">
+  <testcase classname="Scenario: Login as a authenticated user" name="And user enters username and Password" time="0.016">
     <skipped/>
   </testcase>
-  <testcase classname="Scenario: Register new user" name="Scenario: Register new user" time="0.015">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at SeleniumGlueCode.Login.TestLogin.tearDown(TestLogin.java:33)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:40)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:34)
-	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
-	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
-	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
-	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)
-	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
-	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
-	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
-	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
-	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
-	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-</error>
-  </testcase>
-  <testcase classname="Scenario: Register new user" name="Scenario: Register new user" time="0.017">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at SeleniumGlueCode.Search.TestSearch.tearDown(TestSearch.java:31)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:40)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:34)
-	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
-	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
-	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
-	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)
-	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
-	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
-	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
-	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
-	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
-	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-</error>
-  </testcase>
-  <testcase classname="Scenario: Register new user" name="Given user is on HomePage" time="0"/>
-  <testcase classname="Scenario: Register new user" name="When user enters Printed Summer Dress into search field" time="0"/>
-  <testcase classname="Scenario: Register new user" name="And user clicks on Printed Summer Dress in suggestion" time="0.007">
-    <error message="Unable to locate element: /html/body/div[2]/ul/li[1]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;CL-HAILE&apos;, ip: &apos;10.10.16.156&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 62.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.23.0, moz:headless: false, moz:processID: 9360, moz:profile: C:\Users\hai.le\AppData\Loc..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 161d9447-33c8-4f32-99ba-621ed10b3385
-*** Element info: {Using=xpath, value=/html/body/div[2]/ul/li[1]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: /html/body/div[2]/ul/li[1]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;CL-HAILE&apos;, ip: &apos;10.10.16.156&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 62.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.23.0, moz:headless: false, moz:processID: 9360, moz:profile: C:\Users\hai.le\AppData\Loc..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 161d9447-33c8-4f32-99ba-621ed10b3385
-*** Element info: {Using=xpath, value=/html/body/div[2]/ul/li[1]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy19.click(Unknown Source)
-	at PageFactory.HomePage.clickSuggestion(HomePage.java:47)
-	at SeleniumGlueCode.Search.TestSearch.user_clicks_on_Printed_Summer_Dress_in_suggestion(TestSearch.java:59)
-	at ✽.And user clicks on Printed Summer Dress in suggestion(Search/TestSearch.feature:7)
-</error>
-  </testcase>
-  <testcase classname="Scenario: Register new user" name="Scenario: Register new user" time="0.007">
-    <error message="Unable to locate element: /html/body/div[2]/ul/li[1]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;CL-HAILE&apos;, ip: &apos;10.10.16.156&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 62.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.23.0, moz:headless: false, moz:processID: 9360, moz:profile: C:\Users\hai.le\AppData\Loc..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 161d9447-33c8-4f32-99ba-621ed10b3385
-*** Element info: {Using=xpath, value=/html/body/div[2]/ul/li[1]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: /html/body/div[2]/ul/li[1]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;CL-HAILE&apos;, ip: &apos;10.10.16.156&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 62.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.23.0, moz:headless: false, moz:processID: 9360, moz:profile: C:\Users\hai.le\AppData\Loc..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 161d9447-33c8-4f32-99ba-621ed10b3385
-*** Element info: {Using=xpath, value=/html/body/div[2]/ul/li[1]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy19.click(Unknown Source)
-	at PageFactory.HomePage.clickSuggestion(HomePage.java:47)
-	at SeleniumGlueCode.Search.TestSearch.user_clicks_on_Printed_Summer_Dress_in_suggestion(TestSearch.java:59)
-	at ✽.And user clicks on Printed Summer Dress in suggestion(Search/TestSearch.feature:7)
-</error>
-  </testcase>
-  <testcase classname="Scenario: Register new user" name="Then Printed Summer Dress PDP is displayed" time="0.007">
+  <testcase classname="Scenario: Login as a authenticated user" name="Then success message is displayed" time="0.016">
     <skipped/>
   </testcase>
-  <testcase classname="Scenario: Register new user" name="Scenario: Register new user" time="0.007">
+  <testcase classname="Scenario: Login as a authenticated user" name="Scenario: Login as a authenticated user" time="0.016">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at SeleniumGlueCode.Login.TestLogin.tearDown(TestLogin.java:33)
+	at SeleniumGlueCode.BaseStepDefinition.BaseStep.endIfFailed(BaseStep.java:69)
+	at SeleniumGlueCode.Login.TestLogin.tearDown(TestLogin.java:31)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -391,9 +139,33 @@ Session ID: 161d9447-33c8-4f32-99ba-621ed10b3385
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </error>
   </testcase>
-  <testcase classname="Scenario: Register new user" name="Scenario: Register new user" time="0.694">
+  <testcase classname="Scenario: Login fail as user is not exist" name="Given user is on homepage" time="0">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at SeleniumGlueCode.Register.TestRegister.tearDown(TestRegister.java:33)
+	at SeleniumGlueCode.BaseStepDefinition.BaseStep.setUp(BaseStep.java:58)
+	at SeleniumGlueCode.Login.TestLogin.user_is_on_homepage(TestLogin.java:37)
+	at ✽.Given user is on homepage(Login/TestLogin.feature:13)
+</error>
+  </testcase>
+  <testcase classname="Scenario: Login fail as user is not exist" name="Scenario: Login fail as user is not exist" time="0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at SeleniumGlueCode.BaseStepDefinition.BaseStep.setUp(BaseStep.java:58)
+	at SeleniumGlueCode.Login.TestLogin.user_is_on_homepage(TestLogin.java:37)
+	at ✽.Given user is on homepage(Login/TestLogin.feature:13)
+</error>
+  </testcase>
+  <testcase classname="Scenario: Login fail as user is not exist" name="When user navigates to Login Page" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Login fail as user is not exist" name="And user enters non existing username and Password" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Login fail as user is not exist" name="Then error message is displayed" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Login fail as user is not exist" name="Scenario: Login fail as user is not exist" time="0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at SeleniumGlueCode.BaseStepDefinition.BaseStep.endIfFailed(BaseStep.java:69)
+	at SeleniumGlueCode.Login.TestLogin.tearDown(TestLogin.java:31)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -440,21 +212,159 @@ Session ID: 161d9447-33c8-4f32-99ba-621ed10b3385
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </error>
-    <system-err>1539855176649	Marionette	INFO	Stopped listening on port 56150
-[Parent 9360, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-[Child 20708, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-[Child 20708, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-
-###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
-
-
-###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
-
-
-###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
-
-[Parent 9360, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-[Child 27144, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-[GPU 24784, Chrome_ChildThread] WARNING: </system-err>
+  </testcase>
+  <testcase classname="Scenario: Register new user" name="Given user is on Homepage" time="0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at SeleniumGlueCode.BaseStepDefinition.BaseStep.setUp(BaseStep.java:58)
+	at SeleniumGlueCode.Register.TestRegister.user_is_on_Homepage(TestRegister.java:35)
+	at ✽.Given user is on Homepage(Register/TestRegister.feature:6)
+</error>
+  </testcase>
+  <testcase classname="Scenario: Register new user" name="Scenario: Register new user" time="0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at SeleniumGlueCode.BaseStepDefinition.BaseStep.setUp(BaseStep.java:58)
+	at SeleniumGlueCode.Register.TestRegister.user_is_on_Homepage(TestRegister.java:35)
+	at ✽.Given user is on Homepage(Register/TestRegister.feature:6)
+</error>
+  </testcase>
+  <testcase classname="Scenario: Register new user" name="When user goes to Login Page" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Register new user" name="And user enters email and click on Sign Up button" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Register new user" name="And user enters all required information" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Register new user" name="Then success message is shown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Register new user" name="And Name is displayed on header" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Register new user" name="Scenario: Register new user" time="0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at SeleniumGlueCode.BaseStepDefinition.BaseStep.endIfFailed(BaseStep.java:69)
+	at SeleniumGlueCode.Register.TestRegister.tearDown(TestRegister.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
+	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+  </testcase>
+  <testcase classname="Scenario: Register new user" name="Given user is on HomePage" time="0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at SeleniumGlueCode.BaseStepDefinition.BaseStep.setUp(BaseStep.java:58)
+	at SeleniumGlueCode.Search.TestSearch.user_is_on_HomePage(TestSearch.java:34)
+	at ✽.Given user is on HomePage(Search/TestSearch.feature:6)
+</error>
+  </testcase>
+  <testcase classname="Scenario: Register new user" name="Scenario: Register new user" time="0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at SeleniumGlueCode.BaseStepDefinition.BaseStep.setUp(BaseStep.java:58)
+	at SeleniumGlueCode.Search.TestSearch.user_is_on_HomePage(TestSearch.java:34)
+	at ✽.Given user is on HomePage(Search/TestSearch.feature:6)
+</error>
+  </testcase>
+  <testcase classname="Scenario: Register new user" name="When user enters Printed Summer Dress into search field" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Register new user" name="And user clicks on Printed Summer Dress in suggestion" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Register new user" name="Then Printed Summer Dress PDP is displayed" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Register new user" name="Scenario: Register new user" time="0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at SeleniumGlueCode.BaseStepDefinition.BaseStep.endIfFailed(BaseStep.java:69)
+	at SeleniumGlueCode.Search.TestSearch.tearDown(TestSearch.java:29)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
+	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
   </testcase>
 </testsuite>

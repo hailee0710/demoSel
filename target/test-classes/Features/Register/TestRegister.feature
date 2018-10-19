@@ -1,6 +1,7 @@
 Feature: Register Feature
   Verify if user is able to Register in to the site
 
+@DoAfterRegister
   Scenario: Register new user
     Given user is on Homepage
     When user goes to Login Page

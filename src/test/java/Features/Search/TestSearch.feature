@@ -1,6 +1,7 @@
 Feature: Search Feature
   Verify if user is able to search for a specific product
 
+@DoAfterSearch
   Scenario: Register new user
     Given user is on HomePage
     When user enters Printed Summer Dress into search field

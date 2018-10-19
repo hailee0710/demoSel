@@ -26,12 +26,9 @@ public class TestLogin extends BaseStep{
 	    this.scenario = scenario;
 	}
 	
-	@After
+	@After("@DoAfterLoginSuccess")
 	public void tearDown() {
-		if(scenario.isFailed()) {
-		Reporter.setTestRunnerOutput(scenario.getStatus() + " --------------------------</br>");
-		driver.close();
-		}
+		endIfFailed();
 	}
 	
 	//Common steps
@@ -78,7 +75,7 @@ public class TestLogin extends BaseStep{
     	String actual = myAccountPage.getWelcomeText();   	
         Assert.assertEquals(exp_message, actual);
         Reporter.addScreenCaptureFromPath(GetScreenShot.capture(driver, dateFormat.format(date)));
-    	Reporter.setTestRunnerOutput("success message is displayed </br>");
+    	Reporter.setTestRunnerOutput("success message is displayed </br> --------------------------</br>");
     	driver.close();
 
     }  
